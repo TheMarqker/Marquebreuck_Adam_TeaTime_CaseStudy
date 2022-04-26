@@ -1,0 +1,149 @@
+.containerp {
+    display: flex;
+    position: fixed;
+    z-index: 0;
+    top: 2rem;
+    left: 20rem;
+}
+
+.address1 {
+    display: flex;
+    position: fixed;
+    left: 55rem;
+    top: 25rem;
+    background-color: rgb(184, 184, 184);
+}
+
+.address2 {
+    display: flex;
+    position: fixed;
+    left: 85rem;
+    top: 25rem;
+    background-color: rgb(184, 184, 184);
+}
+
+.city {
+    display: flex;
+    position: fixed;
+    left: 60rem;
+    top: 30rem;
+    background-color: rgb(184, 184, 184);
+}
+
+.state {
+    display: flex;
+    position: fixed;
+    left: 76rem;
+    top: 30rem;
+    background-color: rgb(184, 184, 184);
+}
+
+.zip {
+    display: flex;
+    position: fixed;
+    left: 92rem;
+    top: 30rem;
+    background-color: rgb(184, 184, 184);
+}
+
+@media screen and (max-width: 1600px) {
+
+    .containerp {
+        display: flex;
+        position: fixed;
+        top: 2rem;
+        left: 20rem;
+
+    }
+
+    .address1 {
+        display: flex;
+        position: fixed;
+        left: 45rem;
+        top: 25rem;
+        background-color: rgb(184, 184, 184);
+    }
+
+    .address2 {
+        display: flex;
+        position: fixed;
+        left: 65rem;
+        top: 25rem;
+        background-color: rgb(184, 184, 184);
+    }
+
+    .city {
+        display: flex;
+        position: fixed;
+        left: 45rem;
+        top: 30rem;
+        background-color: rgb(184, 184, 184);
+    }
+
+    .state {
+        display: flex;
+        position: fixed;
+        left: 56rem;
+        top: 30rem;
+        background-color: rgb(184, 184, 184);
+    }
+
+    .zip {
+        display: flex;
+        position: fixed;
+        left: 72rem;
+        top: 30rem;
+        background-color: rgb(184, 184, 184);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .containerp {
+        display: flex;
+        position: fixed;
+        top: 2rem;
+        left: 20rem;
+
+    }
+
+    .address1 {
+        display: flex;
+        position: fixed;
+        left: 45rem;
+        top: 5rem;
+        background-color: rgb(184, 184, 184);
+    }
+
+    .address2 {
+        display: flex;
+        position: fixed;
+        left: 45rem;
+        top: 10rem;
+        background-color: rgb(184, 184, 184);
+    }
+
+    .city {
+        display: flex;
+        position: fixed;
+        left: 45rem;
+        top: 15rem;
+        background-color: rgb(184, 184, 184);
+    }
+
+    .state {
+        display: flex;
+        position: fixed;
+        left: 45rem;
+        top: 20rem;
+        background-color: rgb(184, 184, 184);
+    }
+
+    .zip {
+        display: flex;
+        position: fixed;
+        left: 45rem;
+        top: 25rem;
+        background-color: rgb(184, 184, 184);
+    }
+}

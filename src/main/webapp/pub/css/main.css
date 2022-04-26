@@ -1,0 +1,265 @@
+/* Menu Navigation */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Dosis", sans-serif;
+}
+
+.containers {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/background.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    position: fixed;
+}
+
+.register {
+    font-size: 22px;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.navbar {
+    width: 300px;
+    height: 100%;
+    background-color: #262626;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 50% 80% 0;
+    transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+    z-index: 2;
+}
+
+.changes {
+    left: 0;
+}
+
+.hamburger-menu {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(30, 123, 210);
+    transition: all 0.8s;
+}
+
+.changes .line-1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.changes .line-2 {
+    opacity: 0;
+}
+
+.changes .line-3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.nav-list {
+    text-align: right;
+}
+
+.nav-item {
+    list-style: none;
+    margin: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 22px;
+    color: #eee;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgb(30, 123, 210);
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform-origin: left;
+}
+
+.nav-link::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Contact */
+.contains {
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    bottom: -20rem;
+    opacity: 0;
+}
+
+.form-container {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/form-img.png) center no-repeat;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: inset 0.1rem 0.1rem 0.2rem #ddd, inset -0.1rem -0.1rem 0.2rem #ddd;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-form textarea {
+    max-height: 15rem;
+    min-height: 10rem;
+    max-width: 800%;
+    min-width: 90%;
+}
+
+.contact-form input[type="submit"] {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.mek:hover .contains {
+    opacity: 1;
+}
+
+/* Footer */
+.follow,
+.menu-link {
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(239, 243, 245);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.follow {
+    pointer-events: auto;
+}
+
+.menu {
+    display: flex;
+    cursor: pointer;
+    pointer-events: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+}
+
+.menu:hover {
+    pointer-events: auto;
+}
+
+.lined {
+    width: 10rem;
+    height: 0.1rem;
+    margin-right: 5rem;
+    position: fixed;
+}
+
+.lined::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transition: width 0.5s;
+}
+
+.menu:hover .line::after {
+    width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.menu-link {
+    text-decoration: none;
+    position: relative;
+    top: 5rem;
+    opacity: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.menu:hover .menu-link {
+    top: 0;
+    opacity: 1;
+}
+
+.menu-link:nth-child(1) {
+    transition: top 0.5s 0.1s, opacity 0.5s 0.1s, background-color 0.3s;
+}
+
+.menu-link:nth-child(2) {
+    transition: top 0.5s 0.2s, opacity 0.5s 0.2s, background-color 0.3s;
+}
+
+.menu-link:nth-child(3) {
+    transition: top 0.5s 0.2s, opacity 0.5s 0.2s, background-color 0.3s;
+}
+
+.menu-link:nth-child(1):hover {
+    background-color: #104fa1;
+}
+
+.menu-link:nth-child(2):hover {
+    background-color: #bb2e46;
+}
+
+.menu-link:nth-child(3):hover {
+    background-color: #7aa8b6;
+}

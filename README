@@ -1,0 +1,34 @@
+Case Study
+
+Welcome:
+Login/Register   |      Add/Remove Users from Database
+User Profile Page           |    Edit/Customize
+Products           |    Products/Descriptions/Prices
+Favorites Page           |    View/Like/Unlike Products
+Cart System               |    Add/Remove/Total
+Admin Page               |    Add or Update Products
+
+Tables
+Users - many to many - Products
+Order_products
+Orders
+user_roles
+Products
+
+Can have multiple orders from products
+Multiple users can buy the same product
+User Stories | As a user, I want to:
+
+As a user, I want to be able to Create an account
+As a user, I want to be able to Login to my account
+As a user, I want to be able to Logout of my account
+As a user, I want to be able to Buy products
+As a user, I want to be able to Save favorites for easier checkout
+As a user, I want to be able to View my cart and totals
+As a user, I want to be able to Add items to my cart
+
+Technologies and Skills
+Html 5 | Bootstrap 5 | CSS 3 | JavaScript | Java | SpringBoot / Spring MVC|  JPA | Junit |
+
+
+

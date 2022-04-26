@@ -17,9 +17,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-
 }
 
 .heading {
@@ -55,18 +52,6 @@ html {
 }
 
 .signin-btn {
-    background-color: #fff;
-}
-
-.change .signin-btn {
-    background-color: rgb(134, 127, 127);
-}
-
-.signup-btn {
-    background-color: rgb(134, 127, 127);
-}
-
-.change .signup-btn {
     background-color: #fff;
 }
 
@@ -110,22 +95,6 @@ html {
 .form-input:focus {
     box-shadow: 0.5rem 0.5rem 1rem #eee inset;
 }
-
-.message {
-    position: absolute;
-    left: 2rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    margin-top: 1rem;
-    color: #ffffff;
-    box-shadow: 0.5rem 0.5rem 1rem #000000 inset;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
 
 .form-btn {
     box-shadow: 0.5rem 0.5rem 1rem rgb(0, 0, 0);

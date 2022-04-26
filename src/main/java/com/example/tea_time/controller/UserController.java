@@ -134,7 +134,6 @@ public class UserController {
 
         List<User> user = new ArrayList<>();
 
-        // very basic example of error checking
         if (!StringUtils.isEmpty(firstName)) {
             user = userDao.findByFirstNameIgnoreCaseContaining(firstName);
         }
@@ -151,9 +150,6 @@ public class UserController {
         response.setViewName("user/profile");
 
         RegisterFormBean form = new RegisterFormBean();
-
-        //have their username
-        //query Users from mysql where username = username
 
         User user = userDao.findByEmail(email);
 

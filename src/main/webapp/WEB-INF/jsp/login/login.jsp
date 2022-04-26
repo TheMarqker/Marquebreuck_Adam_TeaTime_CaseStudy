@@ -2,6 +2,8 @@
 <jsp:include page="../include/header.jsp"/>
 <link rel="stylesheet" href="../../pub/css/register.css">
 
+
+
 <!-- SignIn/Up -->
 <div class="container2">
     <h1 class="heading">
@@ -9,7 +11,7 @@
     </h1>
     <div class="buttons">
         <a href="user/register">
-            <button class="signup-btn">SignU In</button>
+            <button class="signup-btn">Sign In</button>
         </a>
     </div>
     <div class="form-bg"></div>
@@ -40,9 +42,8 @@
 </div>
 </div>
 
-</body>
+
 
 <!-- Footer -->
 <jsp:include page="../include/footer.jsp"/>
 
-</html>

@@ -115,7 +115,7 @@
     </c:forEach>
 </c:if>
 
-</body>
+
 
 <!-- Footer -->
 <jsp:include page="../include/footer.jsp"/>

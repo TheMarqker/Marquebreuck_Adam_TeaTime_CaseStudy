@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300,400,700"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="../../../pub/css/dropdown.css"/>
     <link rel="stylesheet" href="../../../pub/css/main.css"/>
 
 

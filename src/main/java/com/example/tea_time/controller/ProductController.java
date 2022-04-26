@@ -1,6 +1,8 @@
 package com.example.tea_time.controller;
 
+import com.example.tea_time.database.dao.OrderProductDAO;
 import com.example.tea_time.database.dao.ProductDAO;
+import com.example.tea_time.database.entity.OrderProduct;
 import com.example.tea_time.database.entity.Product;
 import com.example.tea_time.formbean.ProductFormBean;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +26,9 @@ public class ProductController {
     @Autowired
     private ProductDAO productDao;
 
+    @Autowired
+    private OrderProductDAO orderProductDAO;
+
     @RequestMapping(value = "/products", method = RequestMethod.GET)
     public ModelAndView Product() throws Exception {
         ModelAndView response = new ModelAndView();
@@ -40,13 +45,14 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/checkout", method = RequestMethod.GET)
-    public ModelAndView Shop() throws Exception {
+    public ModelAndView Order() throws Exception {
         ModelAndView response = new ModelAndView();
         response.setViewName("checkout");
 
-        List<Product> products = productDao.findAll();
+        List<OrderProduct> order = orderProductDAO.findAll();
 
-        response.addObject("products", products);
+        response.addObject("order", order);
+        Product product = new Product();
 
         return response;
     }
@@ -64,15 +70,11 @@ public class ProductController {
                 log.debug(error.toString());
             }
 
-            // add the errors to the model to be displayed on the page
             response.addObject("bindingResult", bindingResult);
 
-            // add the formbean back to the model
-            // fill the form with the user input
             response.addObject("tea", tea);
         } else {
 
-            //  write the product to the database
 
             Product product = new Product();
 

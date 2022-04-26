@@ -218,7 +218,7 @@ body {
     transition: width 0.5s;
 }
 
-.menu:hover .line::after {
+.menu:hover .lined::after {
     width: 100%;
 }
 

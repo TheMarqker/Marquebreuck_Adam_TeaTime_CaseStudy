@@ -15,7 +15,7 @@ CREATE TABLE `order_products` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `orders(cart)` (
+CREATE TABLE `orders` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`user_id` INT NOT NULL,
 	`order_date` DATE NOT NULL,
@@ -25,12 +25,18 @@ CREATE TABLE `orders(cart)` (
 	PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `users` (
+CREATE TABLE `user` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`email` VARCHAR(255) NOT NULL,
 	`password` VARCHAR(255) NOT NULL,
 	`first_name` VARCHAR(255) NOT NULL,
 	`last_name` VARCHAR(255) NOT NULL,
+	`create_date` DATETIME NOT NULL,
+	`address` varchar(50) NOT NULL,
+	`city` varchar(50) NOT NULL,
+	`state` varchar(50) NOT NULL,
+	`zip` varchar(50) NOT NULL,
+	`phone` varchar(50) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -41,10 +47,16 @@ CREATE TABLE `user_roles` (
 	PRIMARY KEY (`id`)
 );
 
-ALTER TABLE `order_products` ADD CONSTRAINT `order_products_fk0` FOREIGN KEY (`order_id`) REFERENCES `orders(cart)`(`id`);
+ALTER TABLE `order_products` ADD CONSTRAINT `order_products_fk0` FOREIGN KEY (`order_id`) REFERENCES `orders`(`id`);
 
 ALTER TABLE `order_products` ADD CONSTRAINT `order_products_fk1` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`);
 
-ALTER TABLE `orders(cart)` ADD CONSTRAINT `orders(cart)_fk0` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`);
+ALTER TABLE `orders` ADD CONSTRAINT `orders_fk0` FOREIGN KEY (`user_id`) REFERENCES `user`(`id`);
 
-ALTER TABLE `user_roles` ADD CONSTRAINT `user_roles_fk0` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`);
+ALTER TABLE `user_roles` ADD CONSTRAINT `user_roles_fk0` FOREIGN KEY (`user_id`) REFERENCES `user`(`id`);
+
+
+
+
+
+

@@ -26,7 +26,6 @@ public class ErrorController {
         return "error/404";
     }
 
-    // This method is for all 500 errors for any Exception that is thrown
     @ExceptionHandler(Exception.class)
     public ModelAndView handleAllExceptions(HttpServletRequest request, Exception ex) {
 
